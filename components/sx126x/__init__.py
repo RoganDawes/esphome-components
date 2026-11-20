@@ -216,7 +216,7 @@ CONFIG_SCHEMA = (
             cv.Optional(CONF_RX_START, default=True): cv.boolean,
             cv.Required(CONF_RF_SWITCH): cv.boolean,
             cv.Optional(CONF_SHAPING, default="NONE"): cv.enum(SHAPING),
-            cv.Optional(CONF_SPREADING_FACTOR, default=7): cv.int_range(min=6, max=12),
+            cv.Optional(CONF_SPREADING_FACTOR, default=7): cv.int_range(min=5, max=12),
             cv.Optional(CONF_SYNC_VALUE, default=[]): cv.All(
                 cv.ensure_list(cv.hex_uint8_t), cv.Length(max=8)
             ),
